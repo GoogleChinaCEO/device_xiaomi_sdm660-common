@@ -21,7 +21,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.sys.offload.pstimeout.secs=3 \
     persist.audio.in_mmap_delay_micros=100 \
     persist.audio.out_mmap_delay_micros=150 \
-    persist.vendor.audio.ras.enabled=true \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=true \
@@ -83,7 +82,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.hdmi_passthrough.enable=true \
     vendor.audio.feature.hfp.enable=true \
     vendor.audio.feature.wsa.enable=true \
-    vendor.audio.feature.snd_mon.enable=true \
     vendor.audio.feature.hifi_audio.enable=true \
     vendor.audio.feature.hwdep_cal.enable=false \
     vendor.audio.feature.incall_music.enable=false \
@@ -99,8 +97,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.usb_offload.enable=true \
     vendor.audio.feature.usb_offload_burst_mode.enable=false \
     vendor.audio.feature.usb_offload_sidetone_volume.enable=false \
-    vendor.audio.feature.vbat.enable=true \
-    vendor.audio.feature.wsa.enable=false
+    vendor.audio.feature.vbat.enable=true
+
+
+#vendor.audio.feature.wsa.enable=false
 
 ifneq ($(filter jason,$(TARGET_DEVICE)),)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -176,8 +176,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
     ro.opengles.version=196610 \
-    ro.vendor.display.cabl=2 \
-    vendor.display.enable_default_color_mode=1
+    ro.vendor.display.cabl=2
+    
+#vendor.display.enable_default_color_mode=1
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \

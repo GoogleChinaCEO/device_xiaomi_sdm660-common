@@ -164,8 +164,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.bluetooth.a2dp@1.0-impl.mock \
     Bluetooth \
-    com.qualcomm.qti.bluetooth_audio@1.0 \
-    com.qualcomm.qti.bluetooth_audio@1.0.vendor \
     liba2dpoffload \
     libbtconfigstore \
     libbthost_if \
@@ -296,12 +294,12 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/idc/uinput-goodix.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-goodix.idc
 
 # IFAAService
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     IFAAService \
     org.ifaa.android.manager
 
 # IFAA JAR
-PRODUCT_BOOT_JARS += \
+#PRODUCT_BOOT_JARS += \
     org.ifaa.android.manager
 
 # IMS
@@ -310,7 +308,7 @@ PRODUCT_PACKAGES += \
     ims_ext_common.xml \
 
 # IMS JAR
-PRODUCT_BOOT_JARS += \
+# PRODUCT_BOOT_JARS += \
     ims-ext-common_system
 
 # Init
@@ -484,8 +482,8 @@ PRODUCT_PACKAGES += \
     libjson
 
 # QTI Bluetooth
-include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
-$(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
+#include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
+#$(call inherit-product, vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk)
 
 # QTI Performance
 PRODUCT_COPY_FILES += \
